@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "base2048"
+version = "1.0.0"
+description = "Base2048 encoder/decoder — compatible with qntm/base2048"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "BenTheCyberOne", email = "whatever@email.com" }]
+keywords = ["base2048", "encoding", "unicode", "binary"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+    "Topic :: Text Processing :: General",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/benthecyberone/base2048"
+Repository = "https://github.com/benthecyberone/base2048"
+"Bug Tracker" = "https://github.com/benthecyberone/base2048/issues"
+
+[project.scripts]
+base2048 = "base2048.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/base2048"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/",
+    "tests/",
+    "README.md",
+    "LICENSE",
+    "pyproject.toml",
+]
