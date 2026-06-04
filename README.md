@@ -27,8 +27,10 @@ The alphabet consists of 2048 carefully selected "safe" Unicode characters — n
 ## Installation
 
 ```bash
-pip install base2048
+pip install base2048-py
 ```
+
+Then `import base2048` as usual.
 
 Or from source:
 
