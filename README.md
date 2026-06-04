@@ -33,7 +33,7 @@ pip install base2048
 Or from source:
 
 ```bash
-git clone https://github.com/your-username/base2048
+git clone https://github.com/benthecyberone/base2048
 cd base2048
 pip install .
 ```
